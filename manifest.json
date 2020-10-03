@@ -1,0 +1,20 @@
+{
+	"name": "Instagram DL",
+	"version": "0.1",
+	"description": "right-click image downloader for Instagram",
+	"permissions": [
+		"contextMenus",
+		"downloads"
+	],
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": true
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://*.instagram.com/*"],
+			"js": ["content.js"]
+		}
+	],
+	"manifest_version": 2
+}
